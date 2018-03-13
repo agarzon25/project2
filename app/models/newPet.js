@@ -4,7 +4,7 @@ const Sequelize = require("sequelize");
 const sequelize = require("../config/connection.js");
 
 // Creates a "Character" model that matches up with DB
-const newPET = sequelize.define("newPets", {
+const newPET = sequelize.define("allPets", {
   // api route in case some pets have full names... mine does
   route: Sequelize.STRING,
   // Pet type
