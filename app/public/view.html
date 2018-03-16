@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<title>PetPals</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Pet Pal Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+<div class="container" style="position: relative !important; z-index: 9999 !important">                                         
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">TYPE OF PETS
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" style="position: relative !important; z-index: 9999 !important">
+      <li><a href="#">DOGS</a></li>
+      <li><a href="#">CATS</a></li>
+      <li><a href="#">RABBITS</a></li>
+      <li><a href="#">REPTILES</a></li>
+    </ul>
+  </div>
+</div>
+      </div>
+    </div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+<!-- Automatic Slideshow Image Attempt  -->
+  <div class="mySlides w3-display-container w3-center" style="z-index: 0">
+    <img src="petpals.jpg" style="width:50%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
+    </div>
+  </div>
+
+<img src="images/petpals.jpg" alt="Paris" class="center">
+<!-- pet pals header -->
+  <div class="w3-container w3-content w3-center w3-padding-40" style="max-width:800px" id="band">
+    <h2 class="w3-wide">Pet Pals 2018 <i class="fa fa-paw" aria-hidden="true"></i></h2>
+    <p class="w3-wide"><b>We love animals!</b></p>
+    <p class="w3-justify">An application for pet owners to be able to meet up with other pets and make friends. It was inspired by the idea that your owner is sometimes not around! So what do you do? You let your pet hangout with his/her friends while you are busy at work! Let your pet have a pal that matters! </p>
+    <div class="w3-row w3-padding-20">
+      <div class="w3-third">
+      </div>
+    </div>
+  </div>
+
+  <!-- buttons for adding pets  -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">Events for your Pet Friendly Meetup</h2>
+      <p class="w3-opacity w3-center"><i>Everybody needs a pal, even your pet!</i></p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-black">
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+            
+          </div>
+        </div>
+   <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('donateModel').style.display='block'">Add your Pet!</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Donation Modal -->
+  <div id="donateModel" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-teal w3-center w3-padding-32"> 
+        <span onclick="document.getElementById('donateModel').style.display='none'" 
+       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="w3-margin-right"></i>Toy Donation!</h2>
+      </header>
+      <div class="w3-container">
+        <input class="w3-input w3-border" type="text" placeholder="Toy Description">
+        <input class="w3-input w3-border" type="text" placeholder="Enter your email">
+        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">Donate <i class="fa fa-paw"></i></button>
+        <button class="w3-button w3-red w3-section" onclick="document.getElementById('donateModel').style.display='none'">Close <i class="fa fa-remove"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center"><i class="fa fa-paw" aria-hidden="true"></i> CONTACT <i class="fa fa-paw" aria-hidden="true"></i></h2>
+    <p class="w3-opacity w3-center"><i>Fan of the creators? Contact us!</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <div>  <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('donateModel').style.display='block'">Pet accessory donation</button></div>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: PetPalsInc@gmail.com<br>
+
+      </div>
+      <div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+// Automatic Slideshow 
+// var myIndex = 0;
+// carousel();
+
+// function carousel() {
+//     var i;
+//     var x = document.getElementsByClassName("mySlides");
+//      for (i = 0; i < x.length; i++) {
+//         x[i].style.display = "none";  
+//     }
+//     myIndex++;
+//     if (myIndex > x.length) {myIndex = 1}    
+//     x[myIndex-1].style.display = "block";  
+//     setTimeout(carousel, 8000);    
+// }
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, it closes it
+var modal = document.getElementById('donateModel');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
