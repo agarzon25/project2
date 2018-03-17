@@ -11,8 +11,6 @@ const Pal = sequelize.define("pal", {
   palType: Sequelize.STRING,
   // pet breed
   breed: Sequelize.STRING,
-  // pet's age (a string)
-  age: Sequelize.INTEGER,
   // pet gender
   gender: Sequelize.STRING,
   // Pet is nutered of not (an int)
@@ -22,7 +20,7 @@ const Pal = sequelize.define("pal", {
 });
 
 // Syncs with DB
-newPet.sync();
+Pal.sync();
 
 // Makes the Character Model available for other files (will also create a table)
-module.exports = newPET;
+module.exports = Pal;
