@@ -59,6 +59,8 @@ app.get("/api/all", function(req, res) {
       age: req.body.age,
       gender: req.body.gender,
       fixed: req.body.fixed,
+      description: req.body.fixed,
+      image: req.body.image
     })
 
       .then(function(){

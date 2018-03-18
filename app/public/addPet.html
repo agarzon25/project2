@@ -26,7 +26,7 @@ snail - &#x1f40c
 		<div class="container-fluid">
 			<div class="form-inline">
 				<a class="navbar-brand" href="view.html">
-					<i class="fas fa-paw"> Home</i>
+					<i class="fas fa-home"> Home</i>
 				</a>
 			</div>
 		</div>
@@ -41,35 +41,35 @@ snail - &#x1f40c
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-3 col-form-label">&#x1f415 Name</label>
 				  <div class="col-9">
-				    <input class="form-control" type="text" value="What is your pet's name?" id="petName">
+				    <input class="form-control border-dark" type="text" value="What is your pet's name?" id="petName">
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-3 col-form-label">&#x1f408 Type</label>
 				  <div class="col-9">
-				    <input class="form-control" type="text" value="What kind of animal are we pairing up?" id="petType">
+				    <input class="form-control border-dark" type="text" value="What kind of animal is our new Pal?" id="petType">
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-3 col-form-label">&#x1f407 Breed</label>
 				  <div class="col-9">
-				    <input class="form-control" type="text" value="What breed is your pet?" id="petBreed">
+				    <input class="form-control border-dark" type="text" value="What breed is your pet?" id="petBreed">
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-3 col-form-label">&#x1f40c Gender</label>
 				  <div class="col-9">
-				    <select class="custom-select custom-select-sm">
+				    <select class="custom-select custom-select-sm border-dark" id="petGender">
 					  <option selected></option>
-					  <option value="1">Male</option>
-					  <option value="2">Female</option>
+					  <option value="Male">Male</option>
+					  <option value="Female">Female</option>
 					</select>
 				  </div>
 				</div>
 				<div class="form-group row">
 				  <label for="example-text-input" class="col-10 col-form-label">&#x1f412 Please check the box if your pet is neutered</label>
 				  <div class="col-2">
-				    <div class="form-check">
+				    <div class="form-check border-dark">
 					  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox">
 					</div>
 				  </div>
@@ -78,7 +78,7 @@ snail - &#x1f40c
 				    <label for="aboutThePet"
 				    class="col-12 col-form-label text-center">&#x1f422 Tell us about your pet! Please be a descriptive as possible. &#x1f98e</label>
 				    <div class="col-12">
-				    	<textarea class="form-control" id="aboutThePet" rows="10"></textarea>
+				    	<textarea class="form-control border-dark" id="aboutThePet" rows="10"></textarea>
 					</div>
 				</div>
 			</div>
@@ -92,25 +92,18 @@ snail - &#x1f40c
 			                    Browse… <input type="file" id="imgInp">
 			                </span>
 			            </span>
-			            <input type="text" class="form-control" readonly>
+			            <input type="text" class="form-control border-dark" readonly>
 			        </div>
 			        <br>
 			        <img id='img-upload'/>
 				</div>
 			</div>
-				<br>
-				<a href="/add" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> Add Your Pet</a>
-			<!-- </div> -->
+			<a href="/add" class="btn btn-danger btn-lg" id="addBtn"><span class="glyphicon glyphicon-plus"></span> Add Your Pet </a>
 		</div>
 	</div>
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
-	// $("#urlPost").click( url => {
-	// 	console.log($("#petInfo").val())
-	// 	var img = $("#petInfo").val()
-	// 	$("#petImg").attr("src", img)
-	// })
 
 	// Code to utilize browse button and render preview file to the page
 
@@ -150,5 +143,6 @@ snail - &#x1f40c
 		}); 	
 	});
 </script>
+<script type="text/javascript" src="js/addPet.js"></script>
 </body>
 </html>
