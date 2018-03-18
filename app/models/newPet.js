@@ -14,7 +14,11 @@ const Pal = sequelize.define("pal", {
   // pet gender
   gender: Sequelize.STRING,
   // Pet is nutered of not (an int)
-  fixed: Sequelize.BOOLEAN
+  fixed: Sequelize.BOOLEAN,
+  // Pet description
+  description: Sequelize.STRING,
+  // PET image
+  image: Sequelize.STRING
 }, {
   timestamps: false
 });
