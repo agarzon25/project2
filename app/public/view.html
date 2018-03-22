@@ -10,7 +10,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="style.css">
 
 <style>
 body {font-family: "Lato", sans-serif}
@@ -19,45 +19,35 @@ body {font-family: "Lato", sans-serif}
 <body>
 
 <!-- Pet Pal Navbar -->
-<div class="w3-top navbar navbar-default">
-  <div class="container-fluid">
-    <div class="col-md-12 form-inline">
+<div class="container-fluid">
+  <div class="col-md-12 form-inline">
 
-      <a href="#" class="w3-bar-item w3-button w3-padding-large"><i class="fa fa-home" aria-hidden="true"></i> HOME</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-  <!-- <div class="dropdown"> -->
-      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">See our Pals!
-      <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#">DOGS</a></li>
-        <li><a href="#">CATS</a></li>
-        <li><a href="#">RABBITS</a></li>
-        <li><a href="#">REPTILES</a></li>
-      </ul>
-    </div>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+<!-- DROPDOWN MENU -->
+<div class="btn-group dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">CHOOSE YOUR PET
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">DOGS</a></li>
+      <li><a href="#">CATS</a></li>
+      <li><a href="#">RABBITS</a></li>
+      <li><a href="#">REPTILES</a></li>
+    </ul>
   </div>
+
+</div>
 </div>
 
 <!-- Page content -->
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-<!-- Automatic Slideshow Image Attempt  -->
-  <div class="mySlides w3-display-container w3-center" style="z-index: 0">
-    <img src="images/petpals.jpg" style="width:50%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
-    </div>
-  </div>
-  <div class="mySlides w3-display-container w3-center">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">  
-    </div>
-  </div>
-
-<img src="images/petpals.jpg" alt="mainPic" class="center">
+<img src="petpals.jpg" alt="mainPic" class="center">
 <!-- pet pals header -->
   <div class="w3-container w3-content w3-center w3-padding-40" style="max-width:800px" id="petpalCont">
     <h2 class="w3-wide">Pet Pals 2018 <i class="fa fa-paw" aria-hidden="true"></i></h2>
     <p class="w3-wide"><b>We love animals!</b></p>
-    <p class="w3-justify">An application for pet owners to be able to meet up with other pets and make friends. It was inspired by the idea that your owner is sometimes not around! So what do you do? You let your pet hangout with his/her friends while you are busy at work! Let your pet have a pal! Turn playdates to friendships.</p>
+    <p class="w3-justify">An application for pet owners to be able to meet up with other pets and make friends. It was inspired by the idea that your owner is sometimes not around! So what do you do? You let your pet hangout with his/her friends while you are busy at work! Let your pet have a pal that matters! </p>
     <div class="w3-row w3-padding-20">
       <div class="w3-third">
       </div>
@@ -75,11 +65,19 @@ body {font-family: "Lato", sans-serif}
         </ul>
       </div> 
       <div class="w3-row-padding w3-padding-32 row" style="margin:0 -16px">
+        <!-- <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-black">
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <div class="w3-container w3-white">
+          </div>
+        </div> -->
         <div class="col-sm-6 text-center">
-         <a href="addPet.html"><button class="addBtn" onclick="">Add your Pet!</button></a>
+          <button class="addBtn" onclick="">Add your Pet!</button>
         </div>
         <div class="col-sm-6 text-center">
-          <a href="search.html"><button class="searchBtn" onclick="">Search For a Pet</button></a>
+            <button class="searchBtn" onclick="">Search For a Pet</button>
         </div>
       </div>
     </div>
