@@ -40,5 +40,6 @@ $("#petBreed").val("");
 $("#petGender").val("");
 $("#fixed").val("");
 $("#aboutThePet").val("");
+$("#img-upload")
 $("#imgInp").val("");
 });
