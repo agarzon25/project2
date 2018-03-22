@@ -1,5 +1,5 @@
 #topRow {
-	background-color: grey;
+	background-color: black;
 }
 
 .btn-file {
@@ -23,9 +23,33 @@
 }
 
 #img-upload{
-    width: 60%;
+    width: 50%;
 }
 
 #addBtn {
 	margin-bottom: 10px;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100%;
+}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    top:0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+ /*   font-family: Arial;
+    font-size: 17px;*/
 }

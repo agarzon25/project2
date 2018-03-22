@@ -56,10 +56,9 @@ app.get("/api/all", function(req, res) {
       palName: req.body.palName,
       palType: req.body.palType,
       breed: req.body.breed,
-      age: req.body.age,
       gender: req.body.gender,
       fixed: req.body.fixed,
-      description: req.body.fixed,
+      description: req.body.description,
       image: req.body.image
     })
 

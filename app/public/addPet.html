@@ -3,11 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Pet Pals </title>
+	<link rel="stylesheet" type="text/css" href="css/addPet.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/addPet.css">
 </head>
 <!-- Emoji list
 	dog - &#x1f415 
@@ -22,16 +22,17 @@ snail - &#x1f40c
 	monkey - &#x1f412
 -->
 <body>
-	<nav class="navbar navbar-default" id="topRow">
-		<div class="container-fluid">
-			<div class="form-inline">
-				<a class="navbar-brand" href="view.html">
-					<i class="fas fa-home"> Home</i>
-				</a>
+	<video autoplay muted loop id="myVideo"><source src="images/petvideo.mp4" type="video/mp4"></video>
+	<div class="container-fluid content">
+		<nav class="navbar navbar-default" id="topRow">
+			<div class="container-fluid">
+				<div class="form-inline">
+					<a class="navbar-brand" href="view.html">
+						<i class="fas fa-home"> Home</i>
+					</a>
+				</div>
 			</div>
-		</div>
-	</nav>
-	<div class="container">
+		</nav>
 		<div class="col-sm-12 text-center">
 			<h1><i class="fas fa-paw"></i> Tell us about your pet! <i class="fas fa-paw"></i></h1>
 		</div>
@@ -39,45 +40,53 @@ snail - &#x1f40c
 			<div class="col-sm-6">
 				<br>
 				<div class="form-group row">
-				  <label for="example-text-input" class="col-3 col-form-label">&#x1f415 Name</label>
-				  <div class="col-9">
+					<div class="col-1"></div>
+				 	<label class="col-3 col-form-label">&#x1f415 Name</label>
+				  	<div class="col-6">
 				    <input class="form-control border-dark" type="text" value="What is your pet's name?" id="petName">
+				  	</div>
+				</div>
+				<div class="form-group row">
+					<div class="col-1"></div>
+					<label for="example-text-input" class="col-3 col-form-label">&#x1f408 Type</label>
+					<div class="col-6">
+				    	<input class="form-control border-dark" type="text" value="i.e Dog" id="petType">
 				  </div>
 				</div>
 				<div class="form-group row">
-				  <label for="example-text-input" class="col-3 col-form-label">&#x1f408 Type</label>
-				  <div class="col-9">
-				    <input class="form-control border-dark" type="text" value="What kind of animal is our new Pal?" id="petType">
-				  </div>
+					<div class="col-1"></div>
+					<label class="col-3 col-form-label">&#x1f407 Breed</label>
+				  	<div class="col-6">
+				    	<input class="form-control border-dark" type="text" value="What breed is your pet?" id="petBreed">
+				  	</div>
 				</div>
 				<div class="form-group row">
-				  <label for="example-text-input" class="col-3 col-form-label">&#x1f407 Breed</label>
-				  <div class="col-9">
-				    <input class="form-control border-dark" type="text" value="What breed is your pet?" id="petBreed">
-				  </div>
+					<div class="col-1"></div>
+					<label for="example-text-input" class="col-3 col-form-label">&#x1f40c Gender</label>
+				 	<div class="col-6">
+				    	<select class="custom-select custom-select-sm border-dark" id="petGender">
+					  	<option selected></option>
+					  	<option value="Male">Male</option>
+					  	<option value="Female">Female</option>
+						</select>
+				  	</div>
 				</div>
 				<div class="form-group row">
-				  <label for="example-text-input" class="col-3 col-form-label">&#x1f40c Gender</label>
-				  <div class="col-9">
-				    <select class="custom-select custom-select-sm border-dark" id="petGender">
-					  <option selected></option>
-					  <option value="Male">Male</option>
-					  <option value="Female">Female</option>
+					<div class="col-1"></div>
+					<label for="example-text-input" class="col-5 col-form-label">&#x1f412 Is your pet neutered?</label>
+					<div class="col-4">
+				    <select class="custom-select custom-select-sm border-dark" id="fixed">
+						<option selected></option>
+						<option value="Yes">Yes</option>
+						<option value="No">No</option>
 					</select>
-				  </div>
-				</div>
-				<div class="form-group row">
-				  <label for="example-text-input" class="col-10 col-form-label">&#x1f412 Please check the box if your pet is neutered</label>
-				  <div class="col-2">
-				    <div class="form-check border-dark">
-					  <input class="form-check-input position-static" type="checkbox" id="blankCheckbox">
 					</div>
-				  </div>
-				</div>
+				</div>	
 				<div class="form-group row">
 				    <label for="aboutThePet"
 				    class="col-12 col-form-label text-center">&#x1f422 Tell us about your pet! Please be a descriptive as possible. &#x1f98e</label>
-				    <div class="col-12">
+				    <div class="col-1"></div>
+				    <div class="col-10 center">
 				    	<textarea class="form-control border-dark" id="aboutThePet" rows="10"></textarea>
 					</div>
 				</div>
