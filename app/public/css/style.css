@@ -35,6 +35,11 @@ img {
 
 
 
+.carousel.carousel-slider.initialized {
+min-height: 40vh !important 
+max-width: 50vh !important;} 
+
+
 
 
 
