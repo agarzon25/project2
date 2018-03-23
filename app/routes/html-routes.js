@@ -10,7 +10,8 @@ module.exports = function(app) {
 	});
 
 	app.get("/search", function (req,res) {
-		res.sendFile(path.join(__dirname, "../views/layouts/search.html"))
+		// res.sendFile(path.join(__dirname, "../views/layouts/search.html"))
+		res.render("allPets")
 	});
 	
 };

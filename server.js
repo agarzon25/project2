@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const exphbs = require("express-handlebars")
+const path = require("path")
 
 const app = express();
 
@@ -12,9 +13,14 @@ app.use(bodyParser.json());
 
 app.use(express.static("app/public"));
 
-app.engine("handlebars", exphbs({defaultLayout: "search" }))
+app.engine("handlebars", exphbs({
+	defaultLayout: "search", 
+	layoutsDir: "app/views/layouts"
+}))
 
 app.set("view engine", "handlebars")
+
+app.set("views", path.join(__dirname,"app/views"))
 
 require("./app/routes/api-routes.js")(app);
 
