@@ -1,13 +1,86 @@
 <div id="allPets">
-	{{#each pets}}
+	{{#each pals}}
 	<div class="pet">
 		<div class="photo-column">
-			<img src=" {{photo}} ">
+			<img src=" {{image}} ">
 		</div>
 
 		<div class="info-column">
-			<h2> {{name}} <span class="species">({{species}})</span></h2>
+			<h2> {{palName}} <span class="breed">({{breed}})</span></h2>
+
+			<h4 class="headline-bar"> {{palType}} </h4>
+			<ul class="palInfo">
+				<li> {{gender}} </li>
+				<li> {{description}} </li>
+				<li> {{fixed}} </li>
+			</ul>
+
 		</div>
 	</div>
 	{{/each}}
 </div>
+
+<style type="text/css">
+	
+img {
+	max-width: 100%;
+};
+
+.pet {
+  background-color: #FFF;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+};
+
+.pet h2 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 2.5rem;
+};
+
+.pet h2 .breed {
+  font-size: 1.45rem;
+  color: #999;
+};
+
+.headline-bar {
+  margin: 0;
+  background-color: #CCC;
+  padding: 8px 15px;
+};
+
+.palInfo {
+  background-color: #EFEFEF;
+  padding: 0;
+  margin: 0;
+};
+
+.palInfo li {
+  list-style: none;
+  border-bottom: 1px dotted #999;
+  padding: 8px 15px;
+  font-size: .85rem;
+};
+
+.photo-column {
+  width: 35%;
+  float: left;
+};
+
+.info-column {
+  width: 65%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  float: left;
+};
+
+@media (max-width: 760px) {
+  .photo-column,
+  .info-column {
+    width: auto;
+    float: none;
+    padding: 0;
+  }
+};
+</style>
