@@ -4,8 +4,8 @@ module.exports = function(app) {
 
 //see all pals 
 app.get("/api/all", function(req, res) {
-    Pal.findAll({}).then(function(results) {
-      res.json(results);
+    Pal.findAll({}).then(function(data) {
+      return res.json(data)
     });
   });
 

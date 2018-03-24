@@ -52,7 +52,7 @@
           <div class="card-header">
           <strong>Pet Details</strong>
           </div>
-          <div class="card-body">
+          <div class="card-body" id="test">
             {{{body}}}
           </div>
       </div>
@@ -79,26 +79,24 @@
     switch(selection) {
       case "Allpets":
         console.log("all pets works");
-        search();
+        // searchAll();
+        location.href = '/search/all-pets';
         break;
       case "Species":
         console.log("species works")
+        // searchSpecies(searchString);
+        location.href = `/search/species/${searchString}`;
         break;
       case "Breed":
         console.log("Breed works")
+        // searchBreed(searchString);
+        location.href = `/search/breed/${searchString}`
         break;
       case "Gender":
         console.log("Gender works")
+        // searchGender(searchString);
+        location.href = `/search/gender/${searchString}`
         break;
     }
   })
-
-  function search() {
-    $.get("/api/all", function(req, res) {
-      console.log(req)
-      // req.forEach(function(d) {
-      res.render("allPets", {pals: req})
-      // })
-    })
-  }
 </script>

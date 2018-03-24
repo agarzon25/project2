@@ -18,7 +18,7 @@ const Pal = sequelize.define("pal", {
   // Pet description
   description: Sequelize.STRING,
   // PET image
-  image: Sequelize.STRING
+  image: Sequelize.BLOB
 }, {
   timestamps: false
 });
