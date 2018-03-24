@@ -5,12 +5,8 @@
   <meta charset="UTF-8">
   <title>PetPals Search</title>
   <!-- Latest compiled and minified CSS & JS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
   <div class="container">
@@ -26,6 +22,7 @@
             </p> 
         </div>
       </div>
+
     </div>
     <div class="row">
       <div class="col-lg-12">
@@ -33,14 +30,14 @@
             <div class="input-group mb-3">
                <div class="input-group-prepend">
                  <select class="custom-select" id="Select">
-              <option selected>Choose...</option>
-              <option value="Allpets"> All Pets </option>
-              <option value="Species"> Species </option>
-              <option value="Breed"> Breed </option>
-              <option value="Gender"> Gender </option>           
-            </select>
+                  <option selected>Choose...</option>
+                  <option value="Allpets"> All Pets </option>
+                  <option value="Species"> Species </option>
+                  <option value="Breed"> Breed </option>
+                  <option value="Gender"> Gender </option>           
+                </select>
               </div>
-              <input type="text" class="form-control" placeholder="Search for Pal..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <input type="text" class="form-control" placeholder="Search for Pal..." aria-label="Recipient's username" aria-describedby="basic-addon2" id="searchString">
               <div class="input-group-append">
                 <button class="btn btn-outline-primary" id="subBtn" type="submit"><i class="fa fa-paw" aria-hidden="true"></i> Search </button>
               </div>
@@ -69,13 +66,39 @@
  --}}
 </body>
 </html>
-<style type="text/css">
-  .jumbotron {
-    background: url(../../public/images/palsSearch.jpg) no-repeat !important;
-  }
-</style>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script type="text/javascript">
-  function search(argument) {
-    
+  $("#subBtn").on("click", () => {
+    selection = $("#Select").val();
+    console.log(selection);
+    searchString = $("#searchString").val();
+    console.log(searchString);
+
+    switch(selection) {
+      case "Allpets":
+        console.log("all pets works");
+        search();
+        break;
+      case "Species":
+        console.log("species works")
+        break;
+      case "Breed":
+        console.log("Breed works")
+        break;
+      case "Gender":
+        console.log("Gender works")
+        break;
+    }
+  })
+
+  function search() {
+    $.get("/api/all", function(req, res) {
+      console.log(req)
+      // req.forEach(function(d) {
+      res.render("allPets", {pals: req})
+      // })
+    })
   }
 </script>

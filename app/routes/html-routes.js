@@ -14,4 +14,7 @@ module.exports = function(app) {
 		res.render("allPets")
 	});
 	
+	app.get("/all", function(req,res) {
+		res.render("allPets", req)
+	})
 };
